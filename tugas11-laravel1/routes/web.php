@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\authcontroller;
 use App\Http\Controllers\homecontroller;
 
 /*
@@ -16,9 +17,9 @@ use App\Http\Controllers\homecontroller;
 
 Route::get('/', [homeController::class, 'index']);
 
-Route::get('/register', [homeController::class, 'register']);
+Route::get('/register', [authController::class, 'register']);
 
-Route::post('/send', [homeController::class, 'send']);
+Route::post('/send', [authController::class, 'send']);
 
 
 Route::get('/table', function () {
